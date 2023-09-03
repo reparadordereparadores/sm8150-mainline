@@ -9,6 +9,15 @@ config SENSORS_LIS3LV02D
 	tristate
 	depends on INPUT
 
+config XIAOMI_KEYBOARD
+        bool "xiaomi keyboard control-driver"
+        default n
+        help
+          Say Y here, compile xiaomi keyboard control driver.
+
+          If unsure, say N.
+
+
 config AD525X_DPOT
 	tristate "Analog Devices Digital Potentiometers"
 	depends on (I2C || SPI) && SYSFS
